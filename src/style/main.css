@@ -512,6 +512,22 @@ footer{
     cursor: pointer;
     margin-left: 2rem;
     padding: 1rem;
+    transform: scale(1.2);
+    position: relative;
+    color: white;
+}
+
+.delete-order::after{
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: var(--main-balck);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
 }
 
 .btn-cart{
