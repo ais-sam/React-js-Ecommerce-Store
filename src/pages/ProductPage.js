@@ -11,10 +11,14 @@ export default function ProductPage(props) {
     // get the name of the current product from the URL 
     const itemName = useParams().id
     // A - Get the item from the list of items (data) that have the same name of the current product + pass it using props
-    const item = props.items.filter((item)=>{
+    const item = props.items.filter((item,idx)=>{
+        // console.log(idx)
         return item.name === itemName
     })[0];
-
+    console.log(item)
+    
+    console.log(props.items.indexOf(item))
+    // console.log(idx)
     // ##############################
 
     // B- Calculate the quantity of the current product 
@@ -35,7 +39,7 @@ export default function ProductPage(props) {
 
     return (
         <>
-            <Details quantity= {itemQuantity} item = {item} cartChange={handleCartData} orders={props.orders}/>
+            <Details quantity= {itemQuantity} item = {item} index={props.items.indexOf(item)} cartChange={handleCartData} orders={props.orders}/>
             <h3 className='grid-title'>Might also like</h3>
             <ProductsGrid limit={3} items={props.items} />
 

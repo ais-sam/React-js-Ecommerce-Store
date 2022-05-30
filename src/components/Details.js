@@ -1,6 +1,15 @@
 import React, {useState} from 'react'
 import Button from './Button'
 
+import item0 from "../img/item-1.png"
+import item1 from "../img/item-2.png"
+import item2 from "../img/item-3.png"
+import item3 from "../img/item-4.png"
+import item4 from "../img/item-5.png"
+import item5 from "../img/item-6.png"
+import item6 from "../img/item-7.png"
+import item7 from "../img/item-8.png"
+import item8 from "../img/item-9.png"
 
 function Details(props) {
     
@@ -45,6 +54,8 @@ function Details(props) {
     function handleAddToCart() {
         props.cartChange(props.item.name)
     }
+    // array that hold all images 
+    const itemImgs = [item0, item1, item2,item3, item4, item5,item6, item7, item8]
     return (
         <div className='details'>
                 {/* <div className='details__images'>
@@ -53,7 +64,7 @@ function Details(props) {
                         <img className='det-sml rgt' src={props.item.image} alt={props.item.name} />
                 </div> */}
                 <div className='details__main-img'>
-                    <img className='det-big' src={props.item.image} alt={props.item.name}/>
+                    <img className='det-big' src={itemImgs[props.index]} alt={props.item.name}/>
                 </div>
            
             <div className='details__text'>
