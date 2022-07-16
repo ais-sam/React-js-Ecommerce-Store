@@ -6,7 +6,7 @@ const Hero = ()=>{
         <section className="hero" id="hero">
             
             <div className="hero__description">
-                <h1 className="hero__title">Lorem ipsum dolor sit amet</h1>
+                <h1 className="hero__title">Clothes that talk on behalf of you</h1>
                 <p className="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper ultrices magna mauris pellentesque dignissim ante varius diam elit.</p>
                 <Button type='btn-primary' content="more products"/>
             </div>
